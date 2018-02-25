@@ -1,7 +1,7 @@
 Server Setup
 ============
 
-This repo contains my public code for setting up my personal servers.
+This repo contains my public code for setting up my personal sites.
 
 Setup
 -----
