@@ -3,12 +3,6 @@ variable "apex" {
   description = "Parent domain of the S3 site"
 }
 
-# TODO I'd *love* to make this dynamic ("${var.subdomain}.${var.apex}" if subdomain, "${var.domain}" if subdomain is blank), but I'm struggling with the syntax so am punting on it
-variable "domain" {
-  default = "www.example.com"
-  description = "Complete domain name (subdomain + apex) for the S3 site."
-}
-
 variable "subdomain" {
   default = "www"
   description = "Subdomain of the S3 site (might be blank)"
@@ -27,6 +21,8 @@ variable "acm_certificates" {
 }
 
 locals {
-  bucket_name = "${replace(var.domain, ".", "-")}"
+  bucket_name = "${replace(local.domain, ".", "-")}"
+  domain_pieces = ["${var.subdomain}", "${var.apex}"]
+  domain = "${join(".", compact(local.domain_pieces))}"
   subdomain_type = "${var.subdomain == "" ? "ALIAS" : "CNAME"}"
 }

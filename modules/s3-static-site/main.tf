@@ -51,7 +51,7 @@ resource "aws_cloudfront_distribution" "itself" {
     }
   }
 
-  aliases = ["${var.domain}"]
+  aliases = ["${local.domain}"]
 
   enabled = true
   is_ipv6_enabled = true
