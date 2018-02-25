@@ -14,12 +14,6 @@ variable "subdomain" {
   description = "Subdomain of the S3 site (might be blank)"
 }
 
-# TODO This seems ripe for making automatic based on whether var.subdomain is blank.
-variable "subdomain_type" {
-  default = "CNAME"
-  description = "Type of subdomain to create. CNAME (for most records) or ALIAS (for apex domain)"
-}
-
 variable "name" {
   default = "example"
   description = "Unique name to tag the resources with"
@@ -34,4 +28,5 @@ variable "acm_certificates" {
 
 locals {
   bucket_name = "${replace(var.domain, ".", "-")}"
+  subdomain_type = "${var.subdomain == "" ? "ALIAS" : "CNAME"}"
 }

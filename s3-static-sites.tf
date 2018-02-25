@@ -4,7 +4,6 @@ module "bucket-patrickbyrne-net" {
   apex = "patrickbyrne.net"
   domain = "bucket.patrickbyrne.net"
   subdomain = "bucket"
-  subdomain_type = "CNAME"
   name = "bucket"
 }
 
@@ -14,7 +13,6 @@ module "patrickbyrne-net" {
   apex = "patrickbyrne.net"
   domain = "patrickbyrne.net"
   subdomain = ""
-  subdomain_type = "ALIAS"
   name = "patrickbyrne-net"
 }
 
@@ -24,7 +22,6 @@ module "somefine-tv" {
   apex = "somefine.tv"
   domain = "somefine.tv"
   subdomain = ""
-  subdomain_type = "ALIAS"
   name = "somefine-tv"
 }
 

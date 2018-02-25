@@ -99,5 +99,5 @@ resource "dnsimple_record" "itself" {
   domain = "${var.apex}"
   name = "${var.subdomain}"
   value = "${aws_cloudfront_distribution.itself.domain_name}"
-  type = "${var.subdomain_type}"
+  type = "${local.subdomain_type}"
 }
