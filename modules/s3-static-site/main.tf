@@ -80,10 +80,11 @@ resource "aws_cloudfront_distribution" "itself" {
 
   restrictions {
     geo_restriction {
-      restriction_type = "whitelist"
-      locations = ["US"]
+      restriction_type = "none"
     }
   }
+
+  price_class = "PriceClass_100" # just the cheaper north-american servers
 
   tags {
     site = "${var.name}"
