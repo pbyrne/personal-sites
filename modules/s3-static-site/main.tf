@@ -92,6 +92,7 @@ resource "aws_cloudfront_distribution" "itself" {
 
   viewer_certificate {
     acm_certificate_arn = "${lookup(var.acm_certificates, var.apex)}"
+    minimum_protocol_version = "TLSv1.2_2018"
     ssl_support_method = "sni-only"
   }
 }
