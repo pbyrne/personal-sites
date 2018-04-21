@@ -14,6 +14,14 @@ module "patrickbyrne-net" {
   name = "patrickbyrne-net"
 }
 
+module "staging-patrickbyrne-net" {
+  source = "./modules/s3-static-site/"
+
+  apex = "patrickbyrne.net"
+  subdomain = "staging"
+  name = "staging-patrickbyrne-net"
+}
+
 module "somefine-tv" {
   source = "./modules/s3-static-site"
 
