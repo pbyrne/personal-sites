@@ -30,3 +30,10 @@ module "somefine-tv" {
   name      = "somefine-tv"
 }
 
+module "dannahforcitycouncil-com" {
+  source = "./modules/s3-static-site"
+
+  apex      = "dannahforcitycouncil.com"
+  subdomain = ""
+  name      = "dannahforcitycouncil-com"
+}

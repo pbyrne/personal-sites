@@ -19,3 +19,9 @@ resource "dnsimple_record" "beta-somefine-tv-aws-cert-verification" {
   type   = "CNAME"
 }
 
+resource "dnsimple_record" "dannahforcitycouncil-com-aws-cert-verification" {
+  domain = "patrickbyrne.net"
+  name   = "_c2153d3fdf44c0ed604415a310fd2102"
+  value  = "_e69a59fdefdb1189bd94864d2844c1fb.kirrbxfjtw.acm-validations.aws."
+  type   = "CNAME"
+}
