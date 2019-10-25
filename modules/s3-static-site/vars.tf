@@ -15,6 +15,7 @@ variable "name" {
 
 variable "acm_certificates" {
   default = {
+    "dannahforcitycouncil.com" = "arn:aws:acm:us-east-1:274881144938:certificate/8917b5bd-9748-40d6-a87e-43ba7f169b65"
     "patrickbyrne.net" = "arn:aws:acm:us-east-1:274881144938:certificate/c20f3877-46e0-4b0a-a38c-e20e00279187"
     "somefine.tv"      = "arn:aws:acm:us-east-1:274881144938:certificate/d7c03018-765b-4c6e-8821-0cbd42537059"
   }
