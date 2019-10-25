@@ -1,12 +1,8 @@
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
   region     = "us-east-1"
 }
 
 provider "dnsimple" {
-  account = var.dnsimple_account
-  token   = var.dnsimple_token
 }
 
 terraform {
