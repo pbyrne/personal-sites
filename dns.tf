@@ -45,4 +45,3 @@ resource "dnsimple_record" "patrickbyrne-net-playbook-staging" {
   value  = "pbyrne.staging.dribbble.com"
   type   = "CNAME"
 }
-
