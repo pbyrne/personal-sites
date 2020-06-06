@@ -5,6 +5,9 @@ provider "aws" {
 provider "dnsimple" {
 }
 
+provider "netlify" {
+}
+
 terraform {
   backend "s3" {
     bucket = "patrick-byrne-terraform-state"
