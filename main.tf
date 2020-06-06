@@ -8,6 +8,12 @@ provider "dnsimple" {
 provider "netlify" {
 }
 
+# TODO Use this to generate deploy keys automatically on GitHub once this is closed
+# https://github.com/terraform-providers/terraform-provider-github/issues/371
+# provider "github" {
+#   individual = true
+# }
+
 terraform {
   backend "s3" {
     bucket = "patrick-byrne-terraform-state"
