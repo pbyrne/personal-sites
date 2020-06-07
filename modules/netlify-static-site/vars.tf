@@ -1,10 +1,10 @@
 variable "apex" {
-  default = "example.com"
+  default     = "example.com"
   description = "Apex domain of the site"
 }
 
 variable "subdomain" {
-  default = ""
+  default     = ""
   description = "Subdomain, if any, of the site"
 }
 
@@ -13,7 +13,7 @@ variable "name" {
 }
 
 variable "command" {
-  default = "middleman build"
+  default     = "middleman build"
   description = "Command to build the site"
 }
 

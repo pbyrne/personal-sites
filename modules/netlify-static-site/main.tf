@@ -8,7 +8,7 @@
 
 resource "netlify_site" "itself" {
   custom_domain = local.domain
-  name = var.name
+  name          = var.name
 
   repo {
     repo_branch   = "master"
