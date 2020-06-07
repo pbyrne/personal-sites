@@ -1,9 +1,12 @@
 module "dannahforcitycouncil-com" {
-  source = "./modules/s3-static-site"
+  source = "./modules/netlify-static-site"
 
-  apex      = "dannahforcitycouncil.com"
-  subdomain = ""
-  name      = "dannahforcitycouncil-com"
+  apex       = "dannahforcitycouncil.com"
+  subdomain  = ""
+  name       = "dannahforcitycouncil-com"
+  command    = "make build"
+  repo       = "pbyrne/dannah-for-city-council"
+  deploy_key = netlify_deploy_key.key
 }
 
 module "staging-dannahforcitycouncil-com" {
@@ -12,7 +15,7 @@ module "staging-dannahforcitycouncil-com" {
   apex       = "dannahforcitycouncil.com"
   subdomain  = "staging"
   name       = "staging-dannahforcitycouncil-com"
-  command    = "middleman build -e staging"
+  command    = "make build-staging"
   repo       = "pbyrne/dannah-for-city-council"
   deploy_key = netlify_deploy_key.key
 }
