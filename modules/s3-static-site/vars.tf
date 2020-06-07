@@ -27,4 +27,3 @@ locals {
   domain         = join(".", compact(local.domain_pieces))
   subdomain_type = var.subdomain == "" ? "ALIAS" : "CNAME"
 }
-
