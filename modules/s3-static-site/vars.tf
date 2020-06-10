@@ -22,7 +22,7 @@ variable "acm_certificates" {
 }
 
 locals {
-  bucket_name    = replace(local.domain, ".", "-")
+  bucket_name    = replace(var.name, ".", "-")
   domain_pieces  = [var.subdomain, var.apex]
   domain         = join(".", compact(local.domain_pieces))
   subdomain_type = var.subdomain == "" ? "ALIAS" : "CNAME"

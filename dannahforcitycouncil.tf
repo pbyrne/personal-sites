@@ -1,3 +1,5 @@
+resource "netlify_deploy_key" "dannahforcitycouncil-com" {}
+
 module "dannahforcitycouncil-com" {
   source = "./modules/netlify-static-site"
 
@@ -6,7 +8,7 @@ module "dannahforcitycouncil-com" {
   name       = "dannahforcitycouncil-com"
   command    = "make build"
   repo       = "pbyrne/dannah-for-city-council"
-  deploy_key = netlify_deploy_key.key
+  deploy_key = netlify_deploy_key.dannahforcitycouncil-com
 }
 
 module "staging-dannahforcitycouncil-com" {
@@ -17,5 +19,5 @@ module "staging-dannahforcitycouncil-com" {
   name       = "staging-dannahforcitycouncil-com"
   command    = "make build-staging"
   repo       = "pbyrne/dannah-for-city-council"
-  deploy_key = netlify_deploy_key.key
+  deploy_key = netlify_deploy_key.dannahforcitycouncil-com
 }
