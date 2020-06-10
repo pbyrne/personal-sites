@@ -24,7 +24,7 @@ resource "dnsimple_record" "itself" {
   domain = var.apex
   name   = var.subdomain
   type   = local.subdomain_type
-  value  = trimprefix(netlify_site.itself.deploy_url, "http://")
+  value  = "${var.name}.netlify.app"
 }
 
 resource "dnsimple_record" "www" {
@@ -32,5 +32,5 @@ resource "dnsimple_record" "www" {
   domain = var.apex
   name   = "www"
   type   = "CNAME"
-  value  = trimprefix(netlify_site.itself.deploy_url, "http://")
+  value  = "${var.name}.netlify.app"
 }
