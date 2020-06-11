@@ -6,7 +6,7 @@ module "netlify-staging-patrickbyrne-net" {
   apex = "patrickbyrne.net"
   subdomain = "staging"
   name = "staging-patrickbyrne-net"
-  command = "middleman build"
+  command = "make"
   repo = "pbyrne/patrickbyrne.net"
   deploy_key = netlify_deploy_key.patrickbyrne-net
 }
@@ -17,7 +17,7 @@ module "netlify-patrickbyrne-net" {
   apex = "patrickbyrne.net"
   subdomain = ""
   name = "patrickbyrne-net"
-  command = "middleman build"
+  command = "make"
   repo = "pbyrne/patrickbyrne.net"
   deploy_key = netlify_deploy_key.patrickbyrne-net
 }
