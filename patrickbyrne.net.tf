@@ -21,3 +21,11 @@ module "netlify-patrickbyrne-net" {
   repo = "pbyrne/patrickbyrne.net"
   deploy_key = netlify_deploy_key.patrickbyrne-net
 }
+
+module "bucket-patrickbyrne-net" {
+  source = "./modules/s3-static-site/"
+
+  apex      = "patrickbyrne.net"
+  subdomain = "bucket"
+  name      = "bucket-patrickbyrne-net"
+}
