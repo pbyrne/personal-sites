@@ -6,7 +6,7 @@ module "dannahforcitycouncil-com" {
   apex       = "dannahforcitycouncil.com"
   subdomain  = ""
   name       = "dannahforcitycouncil-com"
-  command    = "make build"
+  command    = "make"
   repo       = "pbyrne/dannah-for-city-council"
   deploy_key = netlify_deploy_key.dannahforcitycouncil-com
 }
@@ -17,7 +17,7 @@ module "staging-dannahforcitycouncil-com" {
   apex       = "dannahforcitycouncil.com"
   subdomain  = "staging"
   name       = "staging-dannahforcitycouncil-com"
-  command    = "make build-staging"
+  command    = "make"
   repo       = "pbyrne/dannah-for-city-council"
   deploy_key = netlify_deploy_key.dannahforcitycouncil-com
 }
