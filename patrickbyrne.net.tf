@@ -29,3 +29,31 @@ module "bucket-patrickbyrne-net" {
   subdomain = "bucket"
   name      = "bucket-patrickbyrne-net"
 }
+
+resource "aws_s3_bucket" "bucket-source" {
+  bucket = "patrickbyrne-bucket-source"
+  acl = "public-read"
+
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::patrickbyrne-bucket-source/*"
+      ]
+    }
+  ]
+}
+
+POLICY
+  versioning {
+    enabled = true
+  }
+}
