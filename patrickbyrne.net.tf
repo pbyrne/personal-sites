@@ -3,22 +3,22 @@ resource "netlify_deploy_key" "patrickbyrne-net" {}
 module "netlify-staging-patrickbyrne-net" {
   source = "./modules/netlify-static-site/"
 
-  apex = "patrickbyrne.net"
-  subdomain = "staging"
-  name = "staging-patrickbyrne-net"
-  command = "make"
-  repo = "pbyrne/patrickbyrne.net"
+  apex       = "patrickbyrne.net"
+  subdomain  = "staging"
+  name       = "staging-patrickbyrne-net"
+  command    = "make"
+  repo       = "pbyrne/patrickbyrne.net"
   deploy_key = netlify_deploy_key.patrickbyrne-net
 }
 
 module "netlify-patrickbyrne-net" {
   source = "./modules/netlify-static-site/"
 
-  apex = "patrickbyrne.net"
-  subdomain = ""
-  name = "patrickbyrne-net"
-  command = "make"
-  repo = "pbyrne/patrickbyrne.net"
+  apex       = "patrickbyrne.net"
+  subdomain  = ""
+  name       = "patrickbyrne-net"
+  command    = "make"
+  repo       = "pbyrne/patrickbyrne.net"
   deploy_key = netlify_deploy_key.patrickbyrne-net
 }
 
@@ -32,7 +32,7 @@ module "bucket-patrickbyrne-net" {
 
 resource "aws_s3_bucket" "bucket-source" {
   bucket = "patrickbyrne-bucket-source"
-  acl = "public-read"
+  acl    = "public-read"
 
   policy = <<POLICY
 {
