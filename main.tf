@@ -15,10 +15,13 @@ provider "netlify" {
 # }
 
 terraform {
-  backend "s3" {
-    bucket = "patrick-byrne-terraform-state"
-    key    = "global/s3/terraform.tfstate"
-    region = "us-east-1"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "byrnefamily"
+
+    workspaces {
+      name = "personal-sites"
+    }
   }
 }
 
