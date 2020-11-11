@@ -17,7 +17,7 @@ variable "acm_certificates" {
   default = {
     "dannahforcitycouncil.com" = "arn:aws:acm:us-east-1:274881144938:certificate/e51053c6-a2aa-4471-a8c9-31c55d6af39c"
     "patrickbyrne.net"         = "arn:aws:acm:us-east-1:274881144938:certificate/c20f3877-46e0-4b0a-a38c-e20e00279187"
-    "somefine.tv"              = "arn:aws:acm:us-east-1:274881144938:certificate/d7c03018-765b-4c6e-8821-0cbd42537059"
+    "somefine.tv"              = "arn:aws:acm:us-east-1:274881144938:certificate/3e58278c-2799-4693-8e5e-f99206177729"
   }
 }
 
