@@ -35,7 +35,7 @@ resource "dnsimple_record" "patrickbyrne-net-domainkey" {
 resource "dnsimple_record" "patrickbyrne-net-playbook" {
   domain = "patrickbyrne.net"
   name   = "playbook"
-  value  = "pbyrne.dribbble.com"
+  value  = "domains.dribbble.com"
   type   = "CNAME"
 }
 
