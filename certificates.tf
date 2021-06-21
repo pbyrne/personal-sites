@@ -32,3 +32,10 @@ resource "dnsimple_record" "battlemap-app-aws-cert-verification" {
   value  = "_e1e6e20629e47c7ecb7dc1b9ece9a074.nhqijqilxf.acm-validations.aws"
   type   = "CNAME"
 }
+
+resource "dnsimple_record" "roadmapper-cloud-aws-cert-verification" {
+  domain = "roadmapper.cloud"
+  name   = "_f81a9ce510527cc627cda67a16cd52b8"
+  value  = " _1c6761151f80d5d7a1bf62c85072fd2f.gwpjclltnz.acm-validations.aws"
+  type   = "CNAME"
+}
