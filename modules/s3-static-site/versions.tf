@@ -6,7 +6,7 @@ terraform {
       source = "hashicorp/aws"
     }
     dnsimple = {
-      source = "terraform-providers/dnsimple"
+      source = "dnsimple/dnsimple"
     }
   }
 }

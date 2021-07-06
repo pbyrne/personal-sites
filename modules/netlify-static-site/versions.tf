@@ -1,10 +1,10 @@
 terraform {
   required_providers {
     dnsimple = {
-      source = "terraform-providers/dnsimple"
+      source = "dnsimple/dnsimple"
     }
     netlify = {
-      source = "terraform-providers/netlify"
+      source = "royge/netlify"
     }
   }
   required_version = ">= 0.13"
